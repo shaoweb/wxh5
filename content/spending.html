@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<!-- 出金 -->
+
+<body ng-controller="spendingCity">
+    <div class="spend_head"></div>
+    <div class="code">
+        <img class="img_1" src="images/21.png" alt="">
+        <a href=""></a>
+        <h3>62290<i>****</i><i>****</i><i>**</i>3323</h3>
+        <img class="img_2" src="images/14.png" alt="">
+        <p>此卡为默认提现银行卡</p>
+    </div>
+    <p class="p">注：出金金额不可超出可提资金</p>
+    <h2 class="h2">出金金额</h2>
+    <div class="spend_cont">
+        <span>￥</span>
+        <input class="input" type="text" ng-model="mongy" onkeyup="if(value.match(/^\d{3}$/))value=" /value.replace(value,parseInt(value/10)) " 
+        ;value="/value.replace(/\.\d*\./g, '."') " onKeyPress="if((event.keyCode<48 || event.keyCode>57) && event.keyCode!=46 && event.keyCode!=45 || value.match(/^\d{3}$/) || /\.\d{3}$/.test(value)) {event.returnValue=false}">
+        <img ng-src="{{imgsrc}}" alt="" name="tagge" ng-click="tagglse(!tagge)">
+    </div>
+    <p class="p2">可提资金10.000.00元,<i>全部出金</i></p>
+    <button class="btned" ng-click="tagespan(true)">确认出金</button>
+    <p class="p3">请注意账户资金变动消息！</p>
+    <div class="footer">
+        <span>第三方支付</span>
+        <button></button>
+    </div>
+    <!-- 弹出支付 -->
+    <div class="speand" ng-show="spead">
+        <div class="speand_model">
+            <div class="model_head">
+                <img src="images/3.png" alt="" ng-click="tagespan(false)">
+                <h3>请输入支付密码</h3>
+            </div>
+            <div class="model_cont">
+                <span>出金金额</span>
+                <h3>￥ {{mongy}}</h3>
+                <p>手续费按照0.1%扣除100.00</p>
+                <form class="pass-form" name="pass_form" novalidate pass-form>
+                    <label for="passes"> 
+                    <input class="pass-input Jpass3" type="tel" name="passes" id="passes" autocomplete="off" ng-model="passes" required maxlength="6" /> 
+                    <div class="pass-border-box passes"> 
+                        <span class="pass-border first"><i></i></span> 
+                        <span class="pass-border"><i></i></span> 
+                        <span class="pass-border"><i></i></span> 
+                        <span class="pass-border"><i></i></span> 
+                        <span class="pass-border"><i></i></span> 
+                        <span class="pass-border last"><i></i></span> 
+                        <div class="faguang Jfaguang3"></div> 
+                    </div> 
+                </label>
+                </form>
+                <div class="storage">
+                    <a href="">忘记密码?</a>
+                    <input type="checkbox" ng-model="value" ng-click="staste(value)">
+                    <img class="img" src="images/yanjing.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出支付失败 -->
+    <div class="speand" ng-show="result">
+        <div class="speand_model">
+            <h3>支付密码错误，请重试</h3>
+            <div class="model_foter">
+                <button class="btn">忘记密码</button><button class="btn" ng-click="change(false)">重试</button>
+            </div>
+        </div>
+        <div class="tishi"></div>
+</body>

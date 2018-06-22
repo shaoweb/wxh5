@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<body ng-controller="finishCity">
+    <div class="fin_head">
+        <img src="images/1120.png" alt="">
+        <h3>恭喜您!开户成功！</h3>
+        <p>赶快开始你的赚钱之旅吧！</p>
+    </div>
+    <div class="fin_cont">
+        <div class="fin">
+            <img src="images/简.png" alt="">简单快捷安全，让您乐在“期”中
+        </div>
+        <div class="fin">
+            <img src="images/智.png" alt="">智能行情交易，好平台为您保驾
+        </div>
+        <div class="fin">
+            <img src="images/随.png" alt="">随时随地交易，随时随地收益
+        </div>
+    </div>
+    <div class="sh_footer">
+        <a href="" ng-click="fanhui()">确认</a>
+        <p>您的注册账户号码和登录密码，我们会已短信的方式进行通知</p>
+        <p class="last">请注意查收短信并及时更换密码，保障您的账户安全!</p>
+    </div>
+    <div class="finexd" ng-show="fine">
+        <div class="finexd_con">
+            <p>将对您进行<i>电话回访</i></p>
+            <p>请保持电话通畅，感谢您的配合</p>
+            <span ng-click="finexd(!fine)">好的</span>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<body ng-controller="paymentCity">
+    <div class="header">
+        <img src="images/mima.png" alt="">
+        <ul class="clearfix">
+            <li>身份验证</li>
+            <li>银行账户</li>
+            <li class="select">交易密码</li>
+        </ul>
+    </div>
+    <div class="pay"></div>
+    <div class="ment_cont" id="one">
+        <h3>请设置支付密码</h3>
+        <form class="pass-form" name="pass_form" novalidate pass-form>
+            <label for="pass"> 
+                <input class="pass-input Jpass" type="tel" name="pass" id="pass" autocomplete="off" ng-model="pass" required maxlength="6" /> 
+                <div class="pass-border-box"> 
+                    <span class="pass-border first"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border last"><i></i></span> 
+                    <div class="faguang Jfaguang"></div> 
+                </div> 
+            </label>
+        </form>
+        <div class="zhanshi">
+            <input type="checkbox" ng-click="staste(value)" ng-model="value" checkbox="value">
+            <img class="img" src="images/yanjing.png" alt="">
+        </div>
+    </div>
+    <div class="ment_cont" id="two" style="display:none;">
+        <h3>请再次输入密码</h3>
+        <form class="pass-form" name="pass_form" novalidate pass-form>
+            <label for="passed"> 
+                <input class="pass-input Jpass2" type="tel" name="passed" id="passed" autocomplete="off" ng-model="passed" required maxlength="6"/> 
+                <div class="pass-border-box passed"> 
+                    <span class="pass-border first"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border"><i></i></span> 
+                    <span class="pass-border last"><i></i></span> 
+                    <div class="faguang Jfaguang2"></div> 
+                </div> 
+            </label>
+        </form>
+        <div class="zhanshi">
+            <input type="checkbox" ng-click="stasted(value)" ng-model="value" checkbox="value">
+            <img class="img" src="images/yanjing.png" alt="">
+        </div>
+    </div>
+    <div class="ment_botm">
+        <a class="a" ng-click="paypwd()">完成</a>
+        <p>安全保障中，请放心进行验证！</p>
+    </div>
+    <div class="tishi"></div>
+</body>

@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<body ng-controller="virtualCity">
+    <!-- 头部 -->
+    <div class="head">
+        <img class="regis" src="images/kaihulogo.png" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="regi_cont">
+        <div class="ster">
+            <img src="images/1032.png" alt=""><input class="tel" type="text" placeholder="请输入手机号" ng-model="tel" ng-blur="blured(tel)" onkeyup="if (value.match(/^\d{11}$/)) value = '/value.replace(value,parseInt(value/10))';value = '/value.replace(/\.\d*\./g, '.')'"
+                onkeypress="if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 46 && event.keyCode != 45 || value.match(/^\d{11}$/) || /\.\d{0}$/.test(value)) { event.returnValue = false }">
+        </div>
+        <div class="ster ">
+            <img src="images/验证码.png " alt=" "><input type="text " placeholder="请输入手机验证码" ng-model="check">
+            <button class="btn " type="button" ng-click="vm.sendMessage() " ng-bind="paracont " ng-disabled="vm.disabledClick"></button>
+        </div>
+        <div class="ster">
+            <img src="images/1932.png" alt=""><input type="email" placeholder="请输入邮箱地址" ng-model="invitecode">
+        </div>
+        <btuuon class="kaihu" ng-click="account()">确认开户</btuuon>
+        <p>您的注册账户号码和登录密码，我们会已短信的方式进行通知</p>
+        <p>请注意查收短信并及时更换密码，保障您的账户安全！</p>
+
+    </div>
+    <div class="tishi"></div>
+    <div class="finexd" ng-show="fine">
+        <div class="finexd_con">
+            <p>将对您进行<i>电话回访</i></p>
+            <p>请保持电话通畅，感谢您的配合</p>
+            <span ng-click="finexd(!fine)">好的</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<meta charset="UTF-8">
+
+<body ng-controller="registerCity">
+    <!-- 头部 -->
+    <div class="head">
+        <img class="regis" src="images/kaihulogo.png" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="regi_cont">
+        <div class="ster">
+            <img src="images/1002.png" alt=""><input type="text" placeholder="请输入邀请码(非必填)" ng-model="invitecode">
+        </div>
+        <div class="ster">
+            <img src="images/1032.png" alt=""><input class="tel" type="text" placeholder="请输入手机号" ng-model="tel" onkeyup="if (value.match(/^\d{11}$/)) value = '/value.replace(value,parseInt(value/10))';value = '/value.replace(/\.\d*\./g, '.')'" onkeypress="if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 46 && event.keyCode != 45 || value.match(/^\d{11}$/) || /\.\d{0}$/.test(value)) { event.returnValue = false }">
+        </div>
+        <div class="ster ">
+            <img src="images/验证码.png " alt=" "><input type="text " placeholder="请输入手机验证码" ng-model="check">
+            <button class="btn " type="button" ng-click="vm.sendMessage() " ng-bind="paracont " ng-disabled="vm.disabledClick"></button>
+        </div>
+        <btuuon class="kaihu" ng-click="account()">立即开户</btuuon>
+        <p><input type="checkbox" checked> 本人已阅读并同意本平台的<i ng-click="fica(!notion)">《风险告知书》</i></p>
+        <div class="zhuyi ">
+            <span>需要准备</span>
+            <ul>
+                <li>
+                    <img src="images/938.png " alt=" ">
+                    <p>二代身份证</p>
+                </li>
+                <li>
+                    <img src="images/939.png " alt=" ">
+                    <p>银行卡</p>
+                </li>
+                <li>
+                    <img src="images/940.png " alt=" ">
+                    <p>WiFi或移动网络</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tishi"></div>
+    <div class="notion" ng-show="notion">
+        <div class="fication">
+            <div class="feng">
+                <h2>风险告知书</h2>
+                <div class="feng_cont">
+                    <h4>尊敬的用户!</h4>
+                    <h6>为保障您的合法权益,请您务必逐字逐句地认真阅读了解本《风险告知书》的所有内容,您需要签署本《风险告知书》</h6>
+                    <p>1、进行期货保证金交易是一种隐含高度风险的投资行为.交易的高杠杆作用可能对您有利,也可能对您不利.在决定进行保证金交易之前,您应该谨慎考虑您的投资目标、经验水平和风险偏好.不适合于利用养老基金、举借债务、银行贷款等方式取得资金进行投资的投资者.</p>
+                    <p>2、您的投资可能会大幅亏损,甚至有可能超过您最初的投资,所以您最好不要投资您赔不起的钱.您应该明白与保证金交易相关的风险,为了获得优于真实资金交易的交易基础和基本条款方面的经验,我们鼓励您使用我们免费的金币模拟交易账户.</p>
+                    <p>3、由于行情剧烈波动导致您的交易订单触及(只要价格接触到自动触发)止损金额,系统将自动平仓,导致你的订单亏损,您将承担由此导致的一切损失.</p>
+                    <p>4、交易时段持仓时间到期时,你的订单无论盈亏系统将自动清仓,可能导致你的订单亏损,您将承担由此导致的一切损失.</p>
+                    <p>5、网络交易有不确定性,存在下单延时、网络通信等问题;包括但不限于软硬件故障和网络断线.平台对此类损失或故障概不负责.</p>
+                    <p>6、此外,对于任何基于推荐、预测或其他提供的信息而进行的投资所产生的损失,平台概不负责.平台所载的任何观点、新闻、研究、分析、价格或其他信息,只作为一般的市场评论,并不构成投资建议.平台将不承担任何损失或损害的责任,包括但不限于任何利润损失.这些利润损失可能是直接或间接地使用这些信息,或信赖这些信息而造成的.</p>
+                    <p>7、按照分析的建议而进行的交易,特别是杠杆投资,是投机行为的,可能会带来利润,也可能会带来损失,特别是在当分析中提到的条件没有如预期般发生的情况下.</p>
+                    <p>8、如果下单和平仓过程出现行情终端,或者交易系统被攻击等,平台将依据官方:《保证金监控中心》(https://investorservice.cfmmc.com)的真实发生的交易行为和记录对投资人的交易账户进行结算</p>
+                    <p>9、如果您不明白期货交易中隐含的风险,请不要进行交易. </p>
+                    <span>重要提示:</span>
+                    <p>期货交易业务只适合于以下投资者:</p>
+                    <p>(1)年满18周岁并具有完全民事行为能力的中国公民;</p>
+                    <p>(2)具有二年以上股票及权证、期货交易经验的;</p>
+                    <p>(3)能够充分理解有关于此交易的一切风险,并且具有风险承受能力的投资者;</p>
+                    <p>(4) 因投资失误而造成帐户资金部分或者全部损失、仍不会改变其正常生活方式的投资者.</p>
+                    <p>请确认,以上风险告知已详细阅读,并知晓期货交易过程中的所有风险！！</p>
+                </div>
+                <div class="fica">
+                    <button ng-click="close()">不同意</button>
+                    <button ng-click="fica(!notion)">已阅读,并同意</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

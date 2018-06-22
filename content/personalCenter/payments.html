@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<body ng-controller="paymentsCity">
+    <div class="payments">
+        <div class="payments_main">
+            <div class="payments_head">
+                <ul>
+                    <li ng-class="{ 'active' : data.current == 1 }" ng-click="actions.setCurrent(1)">个人银行</li>
+                    <li ng-class="{ 'active' : data.current == 2 }" ng-click="actions.setCurrent(2)">企业银行</li>
+                </ul>
+            </div>
+            <!-- 个人银行 -->
+            <div class="payBanks personal_bank" ng-if="data.current == 1">
+                <ul>
+                    <li class="active">1111</li>
+                    <li>3333</li>
+                    <li>1111</li>
+                    <li>3333</li>
+                </ul>
+            </div>
+            <!-- 企业银行 -->
+            <div class="payBanks company_bank" ng-if="data.current == 2">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>

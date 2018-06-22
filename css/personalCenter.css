@@ -1,0 +1,738 @@
+/* 账户设置 */
+.setAccount{
+    height: 100%;
+    background: #fff;
+}
+.setAccount_head {
+    height: 164.5px;
+    background: -webkit-linear-gradient(-90deg, #418fde, #4178de);
+}
+.setAccount_main {
+    width: 94%;
+    margin-left: 3%;
+    margin-top: -80px;
+    border-radius: 5px;
+    position: relative;
+}
+.setAccount_main>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.setAccount_main>span{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 48%;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.setAccount_main>p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.setAccount .setAccount_tips{
+    font-size: 14px;
+    margin-left: 3%;
+    line-height: 40px;
+    color: #ccc;
+}
+.setAccount .setPerson_btn{
+    display: block;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 30px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}  
+
+
+.setAccountCard{
+    background: #eee;
+}
+.setAccount .replaceBankCard{
+
+}
+.setAccount .replaceBankCard>p{
+    margin-left: 3%;
+    line-height: 34px;
+    font-size: 12px;
+    color: #ccc;
+}
+.setAccount .replaceBankCard ul{
+    background: #fff;
+}
+.setAccount .replaceBankCard ul>li{
+    padding: 5px 0;
+    line-height: 34px;
+    border-bottom: 1px solid #eee;
+}
+.setAccount .replaceBankCard ul>li label{
+    width: 80px;
+    margin:0 10px;
+    font-size: 14px;
+    color: #ccc;
+    font-weight: normal;
+}
+.setAccount .replaceBankCard ul>li input{
+    width: 60%;
+    border: none;
+}
+.setAccount .replaceBankCard>em{
+    display: block;
+    line-height: 34px;
+    font-size: 12px;
+    color: #ccc;
+    text-align: right;
+    margin-right: 3%;
+}
+.setAccount .replaceBankCard .success_btn{
+    display: block;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 10px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}   
+
+/* 密码设置 */
+.setPassword{
+    width: 96%;
+    height: 100%;
+    margin-left: 2%;
+    padding-top: 10%;
+}
+.setPassword_main{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    padding-top: 70px;
+}
+.setPassword .setPassword_head{
+    position: absolute;
+    width: 100%;
+    top: -20px;
+}
+.setPassword .setPassword_head ul{
+    width: 96%;
+    margin-left: 2%;
+    overflow: hidden;
+}
+.setPassword .setPassword_head ul>li{
+    float: left;
+    width: 48%;
+    line-height: 50px;
+    padding-left:20%;
+    font-size: 18px;
+    border-bottom: 4px solid #ccc;
+    border-radius: 5px;
+}
+.setPassword .setPassword_head ul>li.active{
+    color: #418fde;
+}
+.setPassword .setPassword_head ul>li:nth-of-type(1){
+    background:#fff url("../images/center/setPassword_zh1.png") 5% center no-repeat;
+    background-size: 30%;
+}
+.setPassword .setPassword_head ul>li:nth-of-type(2){
+    margin-left: 4%;
+    background:#fff url("../images/center/setPassword_zf1.png") 5% center no-repeat;
+    background-size: 30%;
+}
+.setPassword .setPassword_head ul>li:nth-of-type(1).active{
+    background:#fff url("../images/center/setPassword_zh2.png") 5% center no-repeat;
+    background-size: 30%;
+    border-bottom: 4px solid #418fde;
+}
+.setPassword .setPassword_head ul>li:nth-of-type(2).active{
+    background:#fff url("../images/center/setPassword_zf2.png") 5% center no-repeat;
+    background-size: 30%;
+    border-bottom: 4px solid #418fde;
+}
+.setPassword .setPassword_main .account_modify{
+    width: 96%;
+    margin-left: 2%;
+}
+.setPassword .setPassword_main .account_modify .account_modify_top>img{
+    display: block;
+    width: 15%;
+    margin: 10px auto;
+}
+.setPassword .setPassword_main .account_modify .account_modify_top>span{
+    display: block;
+    text-align: center;
+} 
+.setPassword .setPassword_main .account_modify ul>li{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding:10px 0 10px 30px;
+    background: url("../images/center/password1.png") left center no-repeat;
+    background-size: 18px;
+}
+.setPassword .setPassword_main .account_modify ul>li:nth-of-type(2){
+    background: url("../images/center/password2.png") left center no-repeat;
+    background-size: 18px;
+}
+.setPassword .setPassword_main .account_modify ul>li.current{
+    border-bottom: 1px solid #418fde;
+}
+.setPassword .setPassword_main .account_modify ul>li input{
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    border: 0;
+}
+.setPassword .setPassword_main .success_btn{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}
+
+.setPassword .setPassword_main .payment_modify{
+    width: 96%;
+    margin-left: 2%;
+}
+.setPassword .setPassword_main .payment_modify ul>li{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding:10px 0 10px 30px;
+    background: url("../images/center/password_tel.png") left center no-repeat;
+    background-size: 18px;
+    position: relative;
+}
+.setPassword .setPassword_main .payment_modify ul>li:nth-of-type(2){
+    background: url("../images/center/password_yzm.png") left center no-repeat;
+    background-size: 18px;
+}
+.setPassword .setPassword_main .payment_modify ul>li:nth-of-type(3){
+    background: url("../images/center/password1.png") left center no-repeat;
+    background-size: 18px;
+}
+.setPassword .setPassword_main .payment_modify ul>li:nth-of-type(4){
+    background: url("../images/center/password2.png") left center no-repeat;
+    background-size: 18px;
+}
+.setPassword .setPassword_main .payment_modify ul>li>.get_yzm{
+    padding: 2px 3px;
+    border: 1px solid #418fde;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-radius: 6px;
+    color: #418fde;
+    font-size: 12px;
+}
+.setPassword .setPassword_main .payment_modify ul>li.current{
+    border-bottom: 1px solid #418fde;
+}
+.setPassword .setPassword_main .payment_modify ul>li input{
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    border: 0;
+}
+
+/* 个人设置 */
+.setPerson{
+
+}
+.setPerson .setPerson_main>.infor {
+    padding: 0 5%;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    overflow: hidden;
+}
+.setPerson .setPerson_main>.infor>.check_tel {
+    margin: 12px 0;
+    float: right;
+    width: 60%;
+    color: #9b9b9b;
+    padding-right: 15px;
+    text-align: right;
+    line-height: 30px;
+}
+.setPerson .setPerson_main>.infor>span {
+    margin: 17px 0 15px;
+    float: left;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.setPerson .setPerson_main>.infor>img {
+    margin: 19px 0 15px 0;
+    float: right;
+    height: 14.5px;
+}
+
+.setPerson .setPerson_main>.infor>input {
+    margin: 12px 0;
+    float: right;
+    width: 60%;
+    padding-right: 15px;
+    text-align: right;
+    line-height: 30px;
+    border: none;
+    outline: none;
+}
+.setPerson .setPerson_main >.infor:first-child{
+    margin-bottom: 10px;
+}
+.setPerson .setPerson_main .success_btn{
+    display: block;
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 40px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}
+
+/* 更换手机号 */
+.replaceTel {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.replaceTel .replaceTel_main{
+    width: 94%;
+    padding-top: 50px;
+    margin-left: 3%;
+}
+.replaceTel .replaceTel_top>img{
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+}
+.replaceTel .replaceTel_top>span{
+    display: block;
+    text-align: center;
+} 
+.replaceTel .replaceTel_top>span b{
+    font-weight: normal;
+}
+.replaceTel ul{
+    margin-top: 50px;
+}
+.replaceTel ul>li{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding:10px 0 10px 30px;
+    background: url("../images/center/password1.png") left center no-repeat;
+    background-size: 18px;
+    position: relative;
+}
+.replaceTel ul>li:nth-of-type(2){
+    background: url("../images/center/password2.png") left center no-repeat;
+    background-size: 18px;
+}
+.replaceTel ul>li.current{
+    border-bottom: 1px solid #418fde;
+}
+.replaceTel ul>li>.get_yzm{
+    padding: 2px 3px;
+    border: 1px solid #418fde;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-radius: 6px;
+    color: #418fde;
+    font-size: 12px;
+}
+.replaceTel ul>li input{
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    border: 0;
+}
+.replaceTel .success_btn{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}
+
+/* 资金明细 */
+
+.detail{
+    color: #9b9b9b;
+    position: relative;
+}
+.detail .detail_rili{
+    position: absolute;
+    width: 25px;
+    right: 5%;
+    top: 8px;
+}
+.detail .detail_rili img{
+    width: 100%;
+}
+.detail .items > span {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+}
+.detail .items .item_main{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.detail .items .item_main .item_main_top {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    color: #333;
+    font-size: 16px;
+}
+.detail .items .item_main .item_main_top .top_left {
+    float: left;
+}
+.detail .items .item_main .item_main_top .top_left.tixian{
+    padding-left: 35px;
+    background: url("../images/center/detailrili.png") left center no-repeat;
+    background-size: 30px 30px;
+}
+.detail .items .item_main .item_main_top .top_left.chongzhi{
+    padding-left: 35px;
+    background: url("../images/center/detailrili.png") left center no-repeat;
+    background-size: 30px 30px;
+}
+.detail .items .item_main .item_main_top .top_right {
+    float: right;
+}
+
+.detail .items .item_main .item_line {
+    position: relative;
+}
+.detail .items .item_main .item_line span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+.detail .items .item_main .item_line span.left {
+    left: -10px;
+    top: -10px;
+}
+.detail .items .item_main .item_line span.right {
+    right: -10px;
+    top: -10px;
+}
+.detail .items .item_main .item_main_foot {
+    padding: 0 20px;
+}
+.detail .items .item_main .item_main_foot ul {
+    border-top: 1px solid #e5e5e5;
+}
+.detail .items .item_main .item_main_foot ul li {
+    height: 40px;
+    line-height: 40px;
+}
+.detail .items .item_main .item_main_foot ul li span {
+    display: inline-block;
+}
+.detail .items .item_main .item_main_foot ul li .left-title {
+    width: 80px;
+    text-align: left;
+}
+.detail .items .item_main .item_main_foot ul li .right-con {
+    color: #666;
+}
+.detail .items .item_main .item_main_foot ul li:nth-child(2) .right-con{
+    color: #9b9b9b;
+}
+
+/* 出金申请 */
+.apply {
+    color: #9b9b9b;
+    padding: 30px 12px 0;
+    background-color: #fff;
+    height: 100%;
+}
+.apply .apply_progress{
+    font-size: 15px;
+    color: #58595b;
+    margin-bottom: 25px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #eee;
+}
+.apply .apply_progress li{
+    overflow: hidden;
+}
+.apply .apply_progress li.apply_line{
+    height: 70px;
+    border-left: 1px dotted #418fde;
+    margin-left: 20px;
+}
+.apply .apply_progress li>i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 40px;
+    margin-top: 3px;
+    float: left;
+}
+.apply .apply_progress li>.apply_progress_r{
+    float: left;
+}
+.apply .apply_progress li.apply_bank i{
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+    margin-right: 28px;
+    background: url("../images/center/apply_2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.apply .apply_progress li:first-child i{
+    background: #418fde;
+}
+.apply .apply_progress li.apply_bank span {
+    display: block;
+}
+.apply .apply_progress li.apply_bank span:first-child {
+    color: #111;
+}
+.apply .apply_progress li:last-child {
+    color: #9b9b9b;
+}
+.apply .apply_progress li.success_dz{
+    color: #418fde;
+}
+.apply .apply_progress li.success_dz i{
+    background: #418fde;
+}
+.apply .apply_money {
+    font-size: 13px;
+}
+.apply .apply_money li {
+    margin: 26px 0;
+}
+.apply .apply_money li span {
+    display: inline-block;
+}
+.apply .apply_money li p {
+    float: right;
+}
+.apply .apply_bottom_btn {
+    margin-top: 50px;
+    text-align: center;
+}
+.apply .apply_bottom_btn button {
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #418fde;
+    background-color: #fff;
+    color: #418fde;
+    margin-bottom: 15px;
+}
+.apply .apply_bottom_btn p {
+    font-size: 12px;
+}
+
+/* 入金申请 */
+.entryGold{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+}
+.entryGold .entryGold_main{
+    width: 100%;
+}
+.entryGold .entryGold_main .entryGold_top{
+    height: 70px;
+    background: #f7f7f7;
+}
+.entryGold .entryGold_main .entryGold_top .left{
+    float: left;
+    width: 40px;
+    margin: 15px 0 0 10px;
+}
+.entryGold .entryGold_main .entryGold_top a{
+    float: right;
+    line-height: 40px;
+    margin-top: 15px;
+    margin-right: 20px;
+    padding-right: 30px;
+    background: url("../images/2.png") center right no-repeat;
+}
+.entryGold .entryGold_main .entryGold_mid{
+    padding: 10px;
+    background: #fff;
+}
+.entryGold .entryGold_main .entryGold_mid h3{
+    font-size: 18px;
+    line-height: 30px;
+}
+.entryGold .entryGold_main .entryGold_mid .entry_input{
+    margin-top: 20px;
+    padding: 10px 0;
+    padding-left: 40px;
+    background: url("../images/center/password_tel.png") center left no-repeat;
+    background-size: 30px;
+    border-bottom: 1px solid #418fde;
+}
+.entryGold .entryGold_main .entryGold_mid .entry_input input{
+    line-height: 30px;
+    width: 65%;
+    border: none;
+    font-size: 18px;
+}
+.entryGold .entryGold_main .entryGold_mid .entry_input i{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url("../images/hei.png") center left no-repeat;
+    background-size: 100%;
+}
+.entryGold .entryGold_main .entryGold_mid .entry_input i.zhengyan{
+    background: url("../images/lan.png") center left no-repeat;
+    background-size: 100%;
+}
+.entry_tips1{
+    font-size: 12px;
+    color: #ccc;
+    line-height: 30px;
+}
+.entry_tips2{
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 36px;
+    text-align: center;
+}
+.entryGold .success_btn{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #418fde;
+    border-radius: 5px;
+}
+.entryGold_foot{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding: 30px;
+}
+.entryGold_foot span{
+    display: block;
+    width: 80px;
+    margin: -40px auto 30px;
+    background: #eee;
+    color: #ccc;
+    
+}
+
+/* 支付方式 */
+.payments{
+    width: 96%;
+    height: 100%;
+    margin-left: 2%;
+    padding-top: 10%;
+}
+.payments_main{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    padding-top: 70px;
+}
+.payments .payments_head{
+    width: 100%;
+    position: absolute;
+    top: -15px;
+}
+.payments .payments_head ul{
+    width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+    background: pink;
+    border: 1px solid #418fde;
+    border-radius: 20px;
+}
+.payments .payments_head ul>li{
+    float: left;
+    width: 50%;
+    line-height: 30px;
+    background: #fff;
+    text-align: center;
+}
+.payments .payments_head ul>li.active{
+    background: #418fde;
+    color: #fff;
+}
+.payments .payBanks{
+
+}
+.payments .payBanks ul{
+    overflow: hidden;
+}
+.payments .payBanks ul>li{
+    float: left;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 42%;
+    margin: 0 4%;
+    margin-bottom: 12px;
+}
+.payments .payBanks ul>li.active {
+    border: 1px solid #418fde;
+    position: relative;
+}
+.payments .payBanks ul>.active::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('../images/center/suc.png') bottom right no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<body class="bankc" ng-controller="bankaccountCity" style="background:#dedede;">
+    <div class="header">
+        <img src="images/yinhangzhuanghu.png" alt="">
+        <ul class="clearfix">
+            <li>身份验证</li>
+            <li class="select">银行账户</li>
+            <li>交易密码</li>
+        </ul>
+    </div>
+    <div class="bank">
+        请输入您的银行账户的真实有效信息
+    </div>
+    <div class="bank_cont">
+        <div class="count">
+            <span>银行卡号</span>
+            <input type="text" placeholder="请输入银行卡号" ng-model="cardNo" onkeyup="this.value =this.value.replace(/\s/g,'').replace(/[^\d]/g,'').replace(/(\d{4})(?=\d)/g,'$1 ');">
+        </div>
+        <div class="count">
+            <span>开户姓名</span>
+            <input type="text" placeholder="请输入开户姓名" ng-model="name">
+        </div>
+        <div class="count">
+            <span>开户身份证号</span>
+            <input type="text" placeholder="请输入开户身份证号" ng-model="idNo" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+        </div>
+        <div class="count">
+            <span>预留手机号码</span>
+            <input type="text" placeholder="请输入预留银行手机号码" ng-model="phoneNo" onkeyup="if (value.match(/^\d{11}$/)) value = '/value.replace(value,parseInt(value/10))';value = '/value.replace(/\.\d*\./g, '.')';" onkeypress="if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 46 && event.keyCode != 45 || value.match(/^\d{11}$/) || /\.\d{0}$/.test(value)) { event.returnValue = false }">
+        </div>
+    </div>
+    <!-- href="#!/payment" -->
+    <div class="bank_botm">
+        <a class="tiao" ng-click="bankCheck()">下一步</a>
+        <p>安全保障中，请放心进行验证！</p>
+    </div>
+    <div class="tishi"></div>
+</body>

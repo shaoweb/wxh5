@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<body ng-controller="informationCity">
+    <div class="header">
+        <img src="images/shengfenyanzheng.png" alt="">
+        <ul class="clearfix">
+            <li class="select">身份验证</li>
+            <li>银行账户</li>
+            <li>交易密码</li>
+        </ul>
+    </div>
+    <div style="height:8px;background:#f0f0f0;margin-top:36px;"></div>
+    <div class="information">
+        <div class="infor">
+            <span>联系地址省市</span>
+            <img src="images/2.png" alt="">
+            <input id="demo1" type="text" readonly="" placeholder="--省--市" value="" ng-model="region">
+            <input id="value1" type="hidden" value="20,234,504">
+        </div>
+        <div class="infor">
+            <span>联系地址</span>
+            <input type="text" placeholder="现居住地址" value="" ng-model="address">
+        </div>
+        <div class="infor">
+            <span>电子邮箱</span>
+            <input type="email" placeholder="有效电子邮箱" value="" ng-model="email">
+        </div>
+        <div class="infor">
+            <span>邮编地址</span>
+            <input type="text" placeholder="联系地址的邮编" value="" ng-model="postcode">
+        </div>
+        <div class="infor">
+            <span>职业背景</span>
+            <img src="images/2.png" alt="">
+            <input id="trigger1" type="text" placeholder="职业" value="" ng-model="profession" readonly unselectable="on" onfocus="this.blur()">
+        </div>
+        <div class="infor">
+            <span>学历背景</span>
+            <img src="images/2.png" alt="">
+            <input id="trigger2" type="text" placeholder="最高学历" value="" ng-model="culture" readonly unselectable="on" onfocus="this.blur()">
+        </div>
+        <div class="infor">
+            <span>是否有中间人介绍开户</span>
+            <img src="images/2.png" alt="">
+            <input style="width:40%" id="trigger3" type="text" ng-model="renne" value="" readonly unselectable="on" onfocus="this.blur()">
+        </div>
+    </div>
+    <div class="infor_bottom">
+        <button class="btn" ng-click="hrefed()">完成</button>
+    </div>
+    <div class="tishi"></div>
+</body>

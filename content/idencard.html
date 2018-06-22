@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+
+<body ng-controller="idencardCity">
+    <div class="header">
+        <img src="images/shengfenyanzheng.png" alt="">
+        <ul class="clearfix">
+            <li class="select">身份验证</li>
+            <li>银行账户</li>
+            <li>交易密码</li>
+        </ul>
+    </div>
+    <div class="iden_cont">
+        <div class="card" ng-click="choose('.localIds')">
+            <img class="localIds" alt="" src="images/手势.png">
+            <span>上传身份证正面照</span>
+        </div>
+        <div class="card" ng-click="choose('.localIds2')">
+            <img class="localIds2" alt="" src="images/身份证反面.png">
+            <span>上传身份证反面照</span>
+        </div>
+        <a ng-click="verification()">下一步</a>
+        <p>安全保障中，请放心进行验证！</p>
+    </div>
+    <div class="tishi"></div>
+    <div class="speand" ng-show="staust">
+        <div class="spe_tu">
+            <img class="img1" src="images/logo@1x.png" alt="">
+            <img class="img2" src="images/45@1x.png" alt="">
+        </div>
+    </div>
+    <div class="speand" ng-show="information">
+        <div class="spead_cont">
+            <div class="spead_dox">
+                <span>请核对您的个人身份信息</span>
+                <p>确认无误后方可进行下一步</p>
+                <div class="dox">
+                    <span>姓名</span>
+                    <span>{{informotion.name}}</span>
+                </div>
+                <div class="dox">
+                    <span>性别</span>
+                    <span>{{informotion.sex}}</span>
+                </div>
+                <div class="dox">
+                    <span>民族</span>
+                    <span>{{informotion.nationality}}</span>
+                </div>
+                <div class="dox">
+                    <span>出生日期</span>
+                    <span>{{informotion.birth}}</span>
+                </div>
+                <div class="dox">
+                    <span>住址</span>
+                    <span>{{informotion.address}}</span>
+                </div>
+                <div class="dox">
+                    <span>公民身份号码</span>
+                    <span>{{informotion.num}}</span>
+                </div>
+                <div class="dox">
+                    <span>签发机关</span>
+                    <span>{{informotion.issue}}</span>
+                </div>
+                <div class="dox">
+                    <span>有效日期</span>
+                    <span>{{informotion.start_date}}</span>
+                </div>
+                <div class="dox_btn">
+                    <button class="btn fl" ng-click="mation(!information)">重新上传</button>
+                    <a href="http://91qhkh.com/wx/index.html#!/information" class="btn fr">确认并下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
