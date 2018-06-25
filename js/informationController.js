@@ -96,7 +96,7 @@ app.controller('informationCity', function($scope, $http) {
             }
             $http({
                 method: 'GET',
-                url: '/wx/regist/check',
+                url: 'regist/check',
                 params: {
                     "tel": $scope.tel,
                     "address": $scope.region + "," + $scope.address,

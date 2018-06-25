@@ -41,7 +41,7 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
         } else {
             $http({
                 method: 'GET',
-                url: '/wx/regist/tel/',
+                url: 'regist/tel/',
                 params: {
                     "tel": value
                 }
@@ -63,7 +63,7 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
             if ($scope.tel !== "") {
                 $http({
                     method: 'GET',
-                    url: '/wx/regist/sms/',
+                    url: 'regist/sms/',
                     params: {
                         "tel": $scope.tel
                     }
@@ -97,7 +97,7 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
         } else {
             $http({
                 method: 'GET',
-                url: '/wx/regist/addIn/',
+                url: 'regist/addIn/',
                 params: {
                     "tel": $scope.tel,
                     "check": $scope.check,

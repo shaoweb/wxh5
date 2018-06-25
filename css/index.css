@@ -22,16 +22,13 @@ h6,
 h7,
 i,
 em,
-label,
 p {
     margin: 0;
     padding: 0;
     font-family: "微软雅黑";
     font-weight: normal;
 }
-body{
-    background: #eee;
-}
+
 html,
 body,
 .view {

@@ -25,7 +25,7 @@ app.controller('bankaccountCity', function($scope, $http) {
             $scope.bankid = removeAllSpace($scope.cardNo);
             $http({
                 method: 'GET',
-                url: '/wx/regist/bankCheck',
+                url: 'regist/bankCheck',
                 params: {
                     "tel": $scope.tel,
                     "name": $scope.name,

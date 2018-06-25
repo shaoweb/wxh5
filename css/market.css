@@ -591,7 +591,7 @@
     overflow: hidden;
 }
 
-.infor_bottom>.btn {
+.infor_bottom>button {
     margin: 0;
     display: block;
     color: #fff;
@@ -1288,7 +1288,7 @@
     margin: 5% auto;
     width: 100%;
     height: 90%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .speand>.spead_cont>.spead_dox>span {
@@ -1340,9 +1340,9 @@
 }
 
 .speand>.spead_cont>.spead_dox>.dox_btn>.btn {
-    padding: 13px 0px;
+    padding: 10px 0px;
     width: 45%;
-    font-size: 15px;
+    font-size: 14px;
     outline: none;
 }
 
@@ -1617,7 +1617,6 @@
     width: 100%;
     height: 100%;
     background: #f0f0f0;
-    overflow: hidden;
 }
 
 .mine_head {
@@ -1640,13 +1639,14 @@
 
 .mine_head>span {
     float: left;
-    color: #b3ffffff;
+    color: #a9a4a9;
     font-size: 10px;
     line-height: 20px;
 }
 
 .mine_head>span>img {
     margin-right: 5px;
+    width: 10px;
 }
 
 .mine_head>input {
@@ -1691,20 +1691,50 @@
 
 .mine_cont {
     margin: -25px auto;
-    width: 96%;
-    height: 100%;
+    width: 90%;
     overflow: hidden;
 }
 
 .mine_cont>.option_ul>li {
     float: left;
     width: 50%;
+    height: 59.5px;
 }
 
-.mine_cont>.option_ul>li>a>img {
+.mine_cont>.option_ul>li>a {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: 90%;
+    height: 50px;
+    background: #fff;
+    border-bottom: 2.5px solid #418fde;
+    border-radius: 5px;
+}
+
+.mine_cont>.option_ul>li>a>img {
+    margin: 10px;
+}
+
+.mine_cont>.option_ul>li>a>i {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    left: 53px;
+    width: 2px;
+    height: 28px;
+    border-radius: 1px;
+    background: #418dde;
+    opacity: .2;
+}
+
+.mine_cont>.option_ul>li>a>span {
+    float: right;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #418fde;
 }
 
 .mine_cont>.figure {
@@ -1712,13 +1742,12 @@
     border-radius: 5px;
     background: #fff;
     overflow: hidden;
-    height: 100%;
 }
 
 .mine_cont>.figure>.mine_fig {
     padding: 0 9px 0 7.5px;
     height: 34px;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dotted #000;
     overflow: hidden;
 }
 
@@ -1743,23 +1772,35 @@
 }
 
 .mine_cont>.figure>.mine_echarts {
-    margin-top: 19px;
-    
+    margin: 19px 0 0;
 }
 
 .mine_cont>.figure>.mine_echarts>.echar {
     height: 200px;
 }
-.mine_cont>.figure .mine_tips{
+
+.mine_cont>.figure>.mine_tips {
     display: block;
+    margin-bottom: 22px;
+    padding: 13px;
+    font-size: 10px;
+    color: #802b2e33;
     text-align: right;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #ccc;
+    border-bottom: 1px dotted #000000;
 }
-.mine_cont>.figure .mine_opinion{
-    border-top: 1px dashed #ccc;
-    padding: 15px 15px 0;
+
+.mine_cont>.figure>.mine_tips>i {
+    float: right;
+    margin: 0 10px 0 5.5px;
+    display: inline-block;
+    width: 14.5px;
+    height: 14.5px;
+    background: url("../images/yiwen.png")no-repeat center/cover;
+}
+
+.mine_cont>.figure>.mine_opinion {
+    margin: 22px 0;
+    padding: 0 22px;
+    color: #b3b3b3;
+    font-size: 12px;
 }

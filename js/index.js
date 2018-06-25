@@ -129,7 +129,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 return $.ajax({
                     type: "GET",
                     dataType: "JSON",
-                    url: '/wx/wechat/jsapiTicket',
+                    url: 'wechat/jsapiTicket',
                     data: {
                         "noncestr": str,
                         "timestamp": times,
@@ -164,7 +164,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 return $.ajax({
                     type: "GET",
                     dataType: "JSON",
-                    url: '/wx/wechat/jsapiTicket',
+                    url: 'wechat/jsapiTicket',
                     data: {
                         "noncestr": str,
                         "timestamp": times,
@@ -199,7 +199,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 return $.ajax({
                     type: "GET",
                     dataType: "JSON",
-                    url: '/wx/wechat/jsapiTicket',
+                    url: 'wechat/jsapiTicket',
                     data: {
                         "noncestr": str,
                         "timestamp": times,
@@ -234,7 +234,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 return $.ajax({
                     type: "GET",
                     dataType: "JSON",
-                    url: '/wx/wechat/jsapiTicket',
+                    url: 'wechat/jsapiTicket',
                     data: {
                         "noncestr": str,
                         "timestamp": times,
@@ -269,7 +269,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 return $.ajax({
                     type: "GET",
                     dataType: "JSON",
-                    url: '/wx/wechat/jsapiTicket',
+                    url: 'wechat/jsapiTicket',
                     data: {
                         "noncestr": str,
                         "timestamp": times,

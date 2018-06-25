@@ -48,7 +48,7 @@ app.controller('paymentCity', function($scope, $interval, $http, $q) {
         } else {
             $http({
                 method: 'GET',
-                url: '/wx/regist/paypwd',
+                url: 'regist/paypwd',
                 params: {
                     "tel": $scope.tel,
                     "paypwd": $scope.passed,

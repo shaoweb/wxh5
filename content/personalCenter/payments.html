@@ -1,32 +1,163 @@
 <meta charset="UTF-8">
 
 <body ng-controller="paymentsCity">
-    <div class="payments">
-        <div class="payments_main">
-            <div class="payments_head">
-                <ul>
-                    <li ng-class="{ 'active' : data.current == 1 }" ng-click="actions.setCurrent(1)">个人银行</li>
-                    <li ng-class="{ 'active' : data.current == 2 }" ng-click="actions.setCurrent(2)">企业银行</li>
+    <div class="bark">
+        <ul class="clearfix bark_ul">
+            <li class="select">银行卡</li>
+            <li>第三方</li>
+        </ul>
+        <!-- <div class="cadde">
+                <ul class="clearfix cadul">
+                    <li name="CCB" date-name="中国建设银行">
+                        <span>
+                            <img src="picture/矢量智能对象.png" alt="">
+                        </span>
+                    </li>
+                    <li name="ABC" date-name="中国农业银行">
+                        <span>
+                            <img src="picture/矢量智能对象_4.png" alt="">
+                        </span>
+                    </li>
+                    <li name="CIB" date-name="兴业银行">
+                        <span>
+                            <img src="picture/矢量智能对象_5.png" alt="">
+                        </span>
+                    </li>
+                    <li name="ICBC" date-name="中国工商银行">
+                        <span>
+                            <img src="picture/矢量智能对象_6.png" alt="">
+                        </span>
+                    </li>
+                    <li name="PSBC" date-name="中国邮政储蓄银行">
+                        <span>
+                            <img src="picture/矢量智能对象_7.png" alt="">
+                        </span>
+                    </li>
+                    <li name="CMBC" date-name="招商银行">
+                        <span>
+                            <img src="picture/矢量智能对象_11.png" alt="">
+                        </span>
+                    </li>
+                    <li name="CNCB" date-name="中信银行">
+                        <span>
+                            <img src="picture/矢量智能对象_12.png" alt="">
+                        </span>
+                    </li>
+                    <li name="BOC" date-name="中国银行">
+                        <span>
+                            <img src="picture/矢量智能对象_14.png" alt="">
+                        </span>
+                    </li>
+                    <li name="SPDB" date-name="浦发银行">
+                        <span>
+                            <img src="picture/1481255599.png" alt="">
+                        </span>
+                    </li>
+                    <li name="CEB" date-name="中国光大银行">
+                        <span>
+                            <img src="picture/矢量智能对象_2.png" alt="">
+                        </span>
+                    </li>
+                    <li name="GDB" date-name="广发银行">
+                        <span>
+                           <img src="picture/4.png" alt="">
+                        </span>
+                    </li>
+                    <li name="HXBANK" date-name="华夏银行">
+                        <span>
+                            <img src="picture/矢量智能对象_8.png" alt="">
+                        </span>
+                    </li>
                 </ul>
-            </div>
-            <!-- 个人银行 -->
-            <div class="payBanks personal_bank" ng-if="data.current == 1">
-                <ul>
-                    <li class="active">1111</li>
-                    <li>3333</li>
-                    <li>1111</li>
-                    <li>3333</li>
-                </ul>
-            </div>
-            <!-- 企业银行 -->
-            <div class="payBanks company_bank" ng-if="data.current == 2">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
+            </div> -->
+        <div class="cadde">
+            <h3>个人网银</h3>
+            <ul class="clearfix cadul">
+                <li name="1106" date-name="中国建设银行">
+                    <span><img src="picture/矢量智能对象.png" alt=""></span>
+                </li>
+                <li name="1101" date-name="中国农业银行">
+                    <span><img src="picture/矢量智能对象_4.png" alt=""></span>
+                </li>
+                <li name="1121" date-name="平安银行">
+                    <span><img src="picture/8.png" alt=""></span>
+                </li>
+                <li name="1103" date-name="兴业银行">
+                    <span><img src="picture/矢量智能对象_5.png" alt=""></span>
+                </li>
+                <li name="1100" date-name="中国工商银行">
+                    <span><img src="picture/矢量智能对象_6.png" alt=""></span>
+                </li>
+                <li name="1119" date-name="中国邮政储蓄银行">
+                    <span><img src="picture/矢量智能对象_7.png" alt=""></span>
+                </li>
+                <li name="1110" date-name="中国民生银行">
+                    <span><img src="picture/矢量智能对象_10.png" alt=""></span>
+                </li>
+                <li name="1102" date-name="招商银行">
+                    <span><img src="picture/矢量智能对象_11.png" alt=""></span>
+                </li>
+                <li name="1104" date-name="中信银行">
+                    <span><img src="picture/矢量智能对象_12.png" alt=""></span>
+                </li>
+                <li name="1116" date-name="上海银行">
+                    <span><img src="picture/矢量智能对象_13.png" alt=""></span>
+                </li>
+                <li name="1107" date-name="中国银行">
+                    <span><img src="picture/矢量智能对象_14.png" alt=""></span>
+                </li>
+                <li name="1120" date-name="浙商银行">
+                    <span><img src="picture/浙商银行.png" alt=""></span>
+                </li>
+            </ul>
+            <h3>企业网银</h3>
+            <ul class="clearfix cadul">
+                <li name="1100" type="2" date-name="中国工商银行">
+                    <span><img src="picture/矢量智能对象_6.png" alt=""></span>
+                </li>
+                <li name="1101" type="2" date-name="中国农业银行">
+                    <span><img src="picture/矢量智能对象_4.png" alt=""></span>
+                </li>
+                <li name="1102" type="2" date-name="招商银行">
+                    <span><img src="picture/矢量智能对象_11.png" alt=""></span>
+                </li>
+                <li name="1104" type="2" date-name="中信银行">
+                    <span><img src="picture/矢量智能对象_12.png" alt=""></span>
+                </li>
+                <li name="1106" type="2" date-name="中国建设银行">
+                    <span><img src="picture/矢量智能对象.png" alt=""></span>
+                </li>
+                <li name="1110" type="2" date-name="中国民生银行">
+                    <span><img src="picture/矢量智能对象_10.png" alt=""></span>
+                </li>
+                <li name="1107" type="2" date-name="中国银行">
+                    <span><img src="picture/矢量智能对象_14.png" alt=""></span>
+                </li>
+            </ul>
         </div>
+        <div class="cadde" style="display: none;">
+            <ul class="clearfix cadul">
+                <li name="1" date-name="环迅支付">
+                    <span>
+                        <img style="width: 90%;" src="picture/huanxunyishoufu@3x.png" alt="">
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="cadde" style="display: none;">
+            <ul class="clearfix cadul">
+                <li name="2" date-name="支付宝支付">
+                    <span>
+                        <img src="picture/zhifubaoyidongduan@1x.png" alt="">
+                    </span>
+                </li>
+                <li name="5" date-name="微信支付">
+                    <span>
+                        <img src="picture/weixin@3x.png" alt="">
+                    </span>
+                </li>
+            </ul>
+        </div> -->
     </div>
+</body>
 </body>

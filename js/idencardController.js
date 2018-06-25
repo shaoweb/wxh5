@@ -66,7 +66,7 @@ app.controller('idencardCity', function($http, $scope, wxService, wxService2) {
 
             $http({
                 method: 'GET',
-                url: '/wx/regist/savePhoto',
+                url: 'regist/savePhoto',
                 params: {
                     "tel": $scope.tel,
                     "mediaId": $scope.arr[0],
