@@ -50,7 +50,7 @@
              }   
          }
      })
-     .controller('spendingCity', function($scope) {
+     .controller('spendingCity', function($scope,$http) {
 
          $scope.title = "出金申请";
          $scope.$emit('title', $scope.title);
@@ -60,7 +60,7 @@
          $scope.passes = "";
          $scope.imgsrc = "images/lan.png";
 
-         $scope.tagglse = (value) => {
+         $scope.tagglse = function(value) {
              $scope.tagge = value;
              if (value !== false) {
                  $scope.imgsrc = "images/lan.png";
@@ -71,10 +71,27 @@
              }
          };
 
-         $scope.tagespan = (value) => {
+         $scope.tagespan = function(value) {
              $scope.spead = value;
              if (value) {
                  console.log(value);
+                 $http({
+                     method: 'GET',
+                     url: 'order/newwithdraw',
+                     params: {
+                         "amount":$scope.mongy
+                     }
+                 }).then(function successCallback(response) {
+                     $scope.date = response.data;
+                     if ($scope.date.result == 1) {
+                         $(".tishi").text('充值成功').fadeIn(300).delay(3000).fadeOut(300);
+                     }
+                 }, function errorCallback(response) {
+                     // 相对路径跳过期页
+                     window.location.href = "#!/overdue";
+                 });
+
+
              } else {
                  var spanDoms = $('.pass-border-box').find('span');
                  $scope.pass = '';
@@ -84,12 +101,12 @@
                  faguang.css({ left: '0' });
              }
          }
-         $scope.change = (value) => {
+         $scope.change = function(value) {
              $scope.result = value;
          }
 
          //支付密码展示
-         $scope.staste = (value) => {
+         $scope.staste = function(value) {
              if (value) {
                  $('.img').attr('src', 'images/biyan.png');
                  for (var i = 0; i < $scope.passes.length; i++) {

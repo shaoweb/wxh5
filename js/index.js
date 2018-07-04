@@ -11,7 +11,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             .when('/register', { templateUrl: 'content/register.html', controller: "registerCity", title: "注册开户" }) //注册开户
             .when('/idencard', { templateUrl: 'content/idencard.html', controller: "idencardCity", title: "身份证验证" }) //身份证验证
             .when('/bankaccount', { templateUrl: 'content/bankAccount.html', controller: "bankaccountCity", title: "银行账户" }) //银行账户
-            .when('/payment', { templateUrl: 'content/payment.html', controller: "paymentCity", title: "设置支付密码" }) //设置支付密码
+            .when('/payment', { templateUrl: 'content/payment.html', controller: "paymentCity", title: "设置支付密码" }) //设置支付密码/开户流程
             .when('/finish', { templateUrl: 'content/finish.html', controller: "finishCity", title: "开户成功" }) //开户成功
             .when('/mine', { templateUrl: 'content/personalCenter/mine.html', controller: "mineCity", title: "总资产" }) //总资产
             .when('/detail', { templateUrl: 'content/personalCenter/detail.html', controller: "detailCity", title: "资金明细" }) //资金明细
@@ -26,7 +26,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             .when('/setPerson', { templateUrl: 'content/personalCenter/setPerson.html', controller: "setPersonCity", title: "个人设置" }) //个人设置
             .when('/replaceTel', { templateUrl: 'content/personalCenter/replaceTel.html', controller: "replaceTelCity", title: "更换手机号" }) //更换手机号
             .when('/setAccountCard', { templateUrl: 'content/personalCenter/setAccountCard.html', controller: "setAccountCardCity", title: "更换银行卡" }) //更换银行卡
-            .when('/setPassword', { templateUrl: 'content/personalCenter/setPassword.html', controller: "setPasswordCity", title: "密码设置" }) //密码设置
+            .when('/setPassword', { templateUrl: 'content/personalCenter/setPassword.html', controller: "setPasswordCity", title: "密码设置" }) //密码设置/包含登录和支付密码
+            .when('/binding', { templateUrl: 'content/personalCenter/binding.html', controller: "bindingCity", title: "绑定" }) //绑定
+            .when('/judge', { templateUrl: 'content/personalCenter/judge.html', controller: "judgeCity", title: "判断账户" }) //判断账户
+            .when('/resetPsd', { templateUrl: 'content/personalCenter/resetPsd.html', controller: "resetPsdCity", title: "忘记密码" }) //忘记密码
+            .when('/overdue', { templateUrl: 'content/personalCenter/overdue.html', controller: "overdueCity", title: "过期" }) //过期
+            .when('/warning', { templateUrl: 'content/personalCenter/warning.html', controller: "warningCity", title: "期投大师" }) //已有账户提示
             .otherwise({ redirectTo: '/register', title: '注册开户' });
     }])
     // 支付密码第一次
@@ -299,9 +304,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         }
     })
     .controller('mainCity', function($scope) {
+//    	$scope.invitecode = $localtion.search();
+    	
         $scope.$on('title', function(event, data) {
             $scope.$watch("titile", function() {
                 $scope.title = data;
             })
         });
     });
+

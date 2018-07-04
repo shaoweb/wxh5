@@ -2,6 +2,19 @@ app.controller('invitecodeCity', function($scope, $http, onMenuShareAppMessage, 
 
     $scope.title = "邀请码";
     $scope.$emit('title', $scope.title);
+
+
+
+
+    $http({
+        method: 'GET',
+        url: 'user/invicat'
+    }).then(function successCallback(response) {
+        $scope.date = response.data;
+    }, function errorCallback(response) {
+        // 失败
+    });
+
     var test = window.location.href;
     $scope.times = Date.parse(new Date());
     var index = test.indexOf("#");

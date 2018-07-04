@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<body ng-controller="bindingCity">
+    <div>
+        <div class="binding">
+            <div class="binding_main">
+            <span>
+            <img src="images/center/yun.png" style="position: absolute;width: 80%;margin-top: 10%;margin-left: 10%;"></span>
+                <div style="text-align: center;width: 100%">
+                    <img src="images/center/binding.png" alt="" class="main_img">
+                </div>
+                <ul class="main_ul">
+                    <li class="current">
+                        <span><img src="images/center/zhanghu.png" alt=""></span>
+                        <input type="text" placeholder="请输入您的登录账号" ng-model="act">
+                    </li>
+                    <li class="current" style="margin-top: 31.5px">
+                        <span><img src="images/center/mima.png" alt="" style="margin-left: 4px"></span>
+                        <input type="{{eyes?'password':'text'}}" placeholder="请输入您的登录密码" ng-model="psd">
+                        <span><img src="{{eyes?'images/center/eyeopen.png':'images/center/eyeclose.png'}}" ng-click="eye()" style="float: right;"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a class="binding_a1" href="#!/resetPsd">忘记密码？</a>
+            <a class="binding_a2" href="#!/register"><label class="binding_a3">没有账户？</label><br>立即注册开户</a>
+        </div>
+        <div>
+            <span class="binding_btn" ng-click="save()">绑定此账户</span>
+        </div>
+        <div class="tishi"></div>
+    </div>
+    <!--波浪效果-->
+    <canvas id="canvas" class="canavs"></canvas>
+
+    <div class="overdue" ng-show="bindingNow">
+        <div class="overdue_main">
+            <span><img src="images/center/light.png" alt="" class="main_img"></span>
+            <h4 class="main_h">提示：绑定成功</h4>
+            <h5 class="main_line"></h5>
+            <div class="main_a">
+                <a ng-click="bindingOk()" class="a">确认</a>
+            </div>
+        </div>
+    </div>
+</body>

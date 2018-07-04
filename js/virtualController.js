@@ -27,13 +27,13 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
 
     closeWindow.getData($scope.str, $scope.times, test).then(function(data) {});
 
-    $scope.finexd = (value) => {
+    $scope.finexd = function(value) {
         $scope.fine = value;
         wx.closeWindow();
     }
 
     //监听电话号
-    $scope.blured = (value) => {
+    $scope.blured = function(value) {
         if ($scope.tel == undefined || $scope.tel == null) {
             $(".tishi").text('请输入手机号').fadeIn(300).delay(3000).fadeOut(300);
         } else if ($scope.tel.length !== 11) {
@@ -63,7 +63,7 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
             if ($scope.tel !== "") {
                 $http({
                     method: 'GET',
-                    url: 'regist/sms/',
+                    url: 'regist/sms',
                     params: {
                         "tel": $scope.tel
                     }
@@ -97,7 +97,7 @@ app.controller('virtualCity', function($scope, $interval, $http, closeWindow) {
         } else {
             $http({
                 method: 'GET',
-                url: 'regist/addIn/',
+                url: 'regist/addIn',
                 params: {
                     "tel": $scope.tel,
                     "check": $scope.check,

@@ -7,7 +7,7 @@
         </div>
         <div class="setAccount_main">
             <img src="images/center/cardbg.png" alt="">
-            <span>555555555555555555555555</span>
+            <span>{{accountNomber}}</span>
             <p>此卡为开户银行卡</p>
         </div>
         <div class="replaceBankCard">
@@ -15,23 +15,36 @@
             <ul>
                 <li>
                     <label>银行卡号</label>
-                    <input type="text">
+                    <input type="text" style="outline: none" ng-model="accountNo">
                 </li>
                 <li>
                     <label>开户姓名</label>
-                    <input type="text">
+                    <input type="text" style="outline: none" ng-model="name">
                 </li>
                 <li>
                     <label>身份证号</label>
-                    <input type="text">
+                    <input type="text" style="outline: none" ng-model="IDcard">
                 </li>
                 <li>
                     <label>预留手机号</label>
-                    <input type="text">
+                    <input type="tel" style="outline: none" maxlength="11" ng-model="phone">
                 </li>
             </ul>
             <em>需要帮助？</em>
-            <span class="success_btn">完成</span>
+            <span class="success_btn" ng-click="OK()">完成</span>
+        </div>
+        <div class="tishi"></div>
+    </div>
+
+    <!--完成后提示框-->
+    <div class="overdue" ng-show="setCardNow">
+        <div class="overdue_main">
+            <span><img src="images/center/light.png" alt="" class="main_img"></span>
+            <h4 class="main_h">提示：绑定或更换成功</h4>
+            <h5 class="main_line"></h5>
+            <div class="main_a">
+                <a ng-click="setOk()" class="a">确认</a>
+            </div>
         </div>
     </div>
 </body>

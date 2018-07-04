@@ -1,8 +1,17 @@
-app.controller('registerCity', function($scope, $interval, $http, closeWindow) {
-
+app.controller('registerCity', function($scope, $interval,$location, $http, closeWindow) {
+	 $scope.surid = $location.search();
+	 console.log($scope.surid);
+	 if ($scope.surid == '' || $scope.surid == null || $scope.surid == undefined || $scope.surid.invitecode == "" || $scope.surid.invitecode == null || $scope.surid.invitecode == undefined) {
+	        $scope.inputfous = false;
+	    } else {
+	        $scope.invitecode = $scope.surid.invitecode;
+	        $scope.inputfous = true;
+	    }
+	 
     $scope.title = "注册开户";
     $scope.$emit('title', $scope.title);
     $scope.notion = true;
+    $scope.notion1 = false;
     $scope.cation = false;
     $scope.vm = {};
 
@@ -12,8 +21,14 @@ app.controller('registerCity', function($scope, $interval, $http, closeWindow) {
 
     $scope.fica = function(value) {
         $scope.notion = value;
-    }
-
+        $scope.notion1 = true;
+    };
+    $scope.Notion = function() {
+        $scope.notion = true;
+    };
+    $scope.fica1 = function(value) {
+        $scope.notion1 = value;
+    };
 
     var test = window.location.href;
     $scope.times = Date.parse(new Date());
@@ -46,7 +61,7 @@ app.controller('registerCity', function($scope, $interval, $http, closeWindow) {
         } else {
             $http({
                 method: 'GET',
-                url: 'regist/tel/',
+                url: 'regist/tel',
                 params: {
                     "tel": $scope.tel
                 }
@@ -61,7 +76,7 @@ app.controller('registerCity', function($scope, $interval, $http, closeWindow) {
                         if ($scope.tel !== "") {
                             $http({
                                 method: 'GET',
-                                url: 'regist/sms/',
+                                url: 'regist/sms',
                                 params: {
                                     "tel": $scope.tel
                                 }
@@ -106,7 +121,7 @@ app.controller('registerCity', function($scope, $interval, $http, closeWindow) {
         } else {
             $http({
                 method: 'GET',
-                url: 'regist/addIn/',
+                url: 'regist/addIn',
                 params: {
                     "tel": $scope.tel,
                     "check": $scope.check,

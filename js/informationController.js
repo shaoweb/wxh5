@@ -3,6 +3,7 @@ app.controller('informationCity', function($scope, $http) {
     $scope.title = "个人信息";
     $scope.$emit('title', $scope.title);
     $scope.tel = window.name;
+    $scope.disclick = false;
 
     //职业
     var mobileSelect1 = new MobileSelect({
@@ -88,6 +89,8 @@ app.controller('informationCity', function($scope, $http) {
         } else if ($scope.renne == undefined) {
             $(".tishi").text('请选择是否有中间人').fadeIn(300).delay(3000).fadeOut(300);
         } else {
+        	$scope.staust = true;
+        	$scope.disclick = true;
             //判断是否有介绍人
             if ($scope.renne == "无介绍人") {
                 $scope.renne = 0;
@@ -99,7 +102,8 @@ app.controller('informationCity', function($scope, $http) {
                 url: 'regist/check',
                 params: {
                     "tel": $scope.tel,
-                    "address": $scope.region + "," + $scope.address,
+                    "address":$scope.address,
+                    "other1":$scope.region,
                     "email": $scope.email,
                     "zipCode": $scope.postcode,
                     "career": $scope.profession,
@@ -112,6 +116,8 @@ app.controller('informationCity', function($scope, $http) {
                 if ($scope.date == 1) {
                     window.location.href = 'http://91qhkh.com/wx/index.html#!/bankaccount';
                 } else {
+                	$scope.staust = false;
+                	$scope.disclick = false;
                     $(".tishi").text('信息填写错误').fadeIn(300).delay(3000).fadeOut(300);
                 }
             }, function errorCallback(response) {

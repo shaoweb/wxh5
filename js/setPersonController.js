@@ -1,4 +1,4 @@
-app.controller('setPersonCity', function($scope, $http, $filter) {
+app.controller('setPersonCity', function($scope, $http) {
 
     $scope.title = "个人设置";
     $scope.$emit('title', $scope.title);
@@ -71,5 +71,49 @@ app.controller('setPersonCity', function($scope, $http, $filter) {
         'type': 1, //数据源类型
         'data': LAreaData //数据源
     });
+
+
+    // 获取个人信息
+    $http({
+        method:'GET',
+        url:'user/searchBype'
+    }).then(function successCallback(response) {
+      $scope.USERinfo = response.data;
+        $scope.region = $scope.USERinfo.other1; //省市
+        $scope.address = $scope.USERinfo.address; //具体地址
+        $scope.email = $scope.USERinfo.email; //电子邮箱
+        $scope.postcode = $scope.USERinfo.zipcode; //地址邮编
+        $scope.profession = $scope.USERinfo.career; //职业
+        $scope.culture = $scope.USERinfo.education; //最高学历
+        $scope.renne = $scope.USERinfo.middleman?'有中间人':'无中间人'; //是否有中间人
+    }, function errorCallback(response) {
+        //失败执行代码
+    });
+    
+    $scope.changePerson = function () {
+        $http({
+            method:'GET',
+            url:'user/updaper',
+            params:{
+                "address":$scope.address,
+                "email":$scope.email,
+                "zipCode":$scope.postcode,
+                "career":$scope.profession,
+                "education":$scope.culture,
+                "middleman":$scope.renne,
+                "other1":$scope.region
+            }
+        }).then(function successCallback(response) {
+            $scope.respec = response.data.result;
+            if($scope.respec == 1){
+                window.location.href = "#!/setAccount"
+            }else {
+                $(".tishi").text('修改失败').fadeIn(300).delay(3000).fadeOut(300);
+            }
+        }, function errorCallback(response) {
+            //失败执行代码
+        });
+    }
+
 
 })

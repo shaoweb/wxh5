@@ -8,6 +8,7 @@ app.controller('bankaccountCity', function($scope, $http) {
     $scope.title = "银行账户";
     $scope.$emit('title', $scope.title);
     $scope.tel = window.name;
+    $scope.disclick = false;
     //正则去空格
     function removeAllSpace(str) {
         return str.replace(/\s+/g, "");
@@ -22,6 +23,8 @@ app.controller('bankaccountCity', function($scope, $http) {
         } else if ($scope.phoneNo == null || $scope.phoneNo == undefined) {
             $(".tishi").text('请输入预留手机号').fadeIn(300).delay(3000).fadeOut(300);
         } else {
+        	$scope.disclick = true;
+        	$scope.staust = true;
             $scope.bankid = removeAllSpace($scope.cardNo);
             $http({
                 method: 'GET',
@@ -35,6 +38,7 @@ app.controller('bankaccountCity', function($scope, $http) {
                 }
             }).then(function successCallback(response) {
                 $scope.date = response.data;
+                $scope.staust = false;
                 if ($scope.date.result == 1) {
                     window.location.href = 'http://91qhkh.com/wx/index.html#!/payment';
                 } else if ($scope.date.result == 0) {
@@ -42,6 +46,7 @@ app.controller('bankaccountCity', function($scope, $http) {
                 } else if ($scope.date.result == 3) {
                     $(".tishi").text('银行卡信息有误').fadeIn(300).delay(3000).fadeOut(300);
                 }
+                $scope.disclick = true;
             }, function errorCallback(response) {
                 // 请求失败执行代码
             });

@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>{{title}}</title>
+    <title ng-bind="title"></title>
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/mobileSelect.css">
     <link rel="stylesheet" href="css/lib/LArea.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/market.css">
-    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/personalCenter.css"> 
 </head>
 
 <body>
     <div class="view" ng-view></div>
-    <!-- 弹出层-验证登录过期 -->
 </body>
 <script src="js/lib/angular.min.js"></script>
 <script src="js/lib/angular-route.min.js"></script>
@@ -50,5 +49,10 @@
 <script src="js/applyController.js"></script>
 <script src="js/setAccountCardController.js"></script>
 <script src="js/detailController.js"></script>
+<script src="js/bindingController.js"></script>
+<script src="js/resetPsdController.js"></script>
+<script src="js/overdueController.js"></script>
+<script src="js/warningController.js"></script>
+<script src="js/judgeController.js"></script>
 
 </html>

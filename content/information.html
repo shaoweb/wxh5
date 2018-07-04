@@ -45,8 +45,14 @@
             <input style="width:40%" id="trigger3" type="text" ng-model="renne" value="" readonly unselectable="on" onfocus="this.blur()">
         </div>
     </div>
+    <div class="speand" ng-show="staust">
+        <div class="spe_tu">
+            <img class="img1" src="images/logo@1x.png" alt="">
+            <img class="img2" src="images/45@1x.png" alt="">
+        </div>
+    </div>
     <div class="infor_bottom">
-        <button class="btn" ng-click="hrefed()">完成</button>
+        <button class="btn" ng-click="hrefed()" ng-disabled = "disclick">完成</button>
     </div>
     <div class="tishi"></div>
 </body>

@@ -1,94 +1,157 @@
 <meta charset="UTF-8">
 
 <body ng-controller="detailCity">
-    <div class="detail" style="background-color: #f0f0f0;overflow-y: auto;">
-        <span class="detail_rili"><img src="images/center/detailrili.png" alt=""></span>
-        <div class="items">
-            <span style="font-size: 11px;">2018-06-01 下午 23:25</span>
-            <div class="item_main">
-                <div class="item_main_top">
-                    <span class="top_left tixian">账户提现</span>
-                    <span class="top_right">-100000000000元</span>
+    <div class="detail">
+        <div class="detail_step">
+            <ul>
+                <li style="height: 40px;padding-top: 10px;">
+                    <span class="head_top">当前选择日期：</span><span class="head_btm">{{Year}}.{{Mon}}.{{Day}}</span>
+                </li>
+            </ul>
+            <div id="TimePick">
+                <span class="detail_rili"><img src="images/center/detailrili.png"></span>
+            </div>
+            <h5 class="detail_h5"></h5>
+        </div>
+        <div class="detail_flow">
+            <div class="items">
+                <span class="items_time">2018-06-01 下午 23:25</span>
+                <div class="item_main">
+                    <div class="item_main_top">
+                        <img src="images/center/detailrili1.png" class="top_img">
+                        <span class="top_lab">账户提现</span>
+                        <span class="top_sum">-100000000000元</span>
+                    </div>
+                    <div class="item_line">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </div>
+                    <div class="item_main_foot">
+                        <ul>
+                            <li>
+                                <span class="left-title">订单号</span>
+                                <span class="right-con">2018062106220623</span>
+                            </li>
+                            <li>
+                                <span class="left-title">用途</span>
+                                <span class="right-con">账户提现</span>
+                                <span style="color: #bc1f31;margin-left: 5px">审核中</span>
+                            </li>
+                            <li>
+                                <span class="left-title">支付方式</span>
+                                <span class="right-con">中国银行(8344)</span>
+                            </li>
+                            <li>
+                                <span class="left-title">手续费</span>
+                                <span class="right-con">￥10.00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="item_line">
-                    <span class="left"></span>
-                    <span class="right"></span>
+            </div>
+            <div class="items">
+                <span class="items_time">2018-06-01 下午 23:25</span>
+                <div class="item_main">
+                    <div class="item_main_top">
+                        <img src="images/center/detailrili2.png" class="top_img">
+                        <span class="top_lab">账户充值</span>
+                        <span class="top_sum">+100000000000元</span>
+                    </div>
+                    <div class="item_line">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </div>
+                    <div class="item_main_foot">
+                        <ul>
+                            <li>
+                                <span class="left-title">订单号</span>
+                                <span class="right-con">2018062106220623</span>
+                            </li>
+                            <li>
+                                <span class="left-title">用途</span>
+                                <span class="right-con">账户充值</span><span style="color: #19b341;margin-left: 5px">已完成</span>
+                            </li>
+                            <li>
+                                <span class="left-title">支付方式</span>
+                                <span class="right-con">中国银行(8344)</span>
+                            </li>
+                            <li>
+                                <span class="left-title">手续费</span>
+                                <span class="right-con">￥10.00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="item_main_foot">
-                    <ul>
-                        <li>
-                            <span class="left-title">时间</span>
-                            <span class="right-con">2018-06-01 下午 23：25</span>
-                        </li>
-                        <li>
-                            <span class="left-title">用途</span>
-                            <span class="right-con">账户充值</span>
-                        </li>
-                        <li>
-                            <span class="left-title">支付方式</span>
-                            <span class="right-con">中国银行(8344)</span>
-                        </li>
-                    </ul>
+            </div>
+            <div class="items">
+                <span class="items_time">2018-06-01 下午 23:25</span>
+                <div class="item_main">
+                    <div class="item_main_top">
+                        <img src="images/center/detailrili2.png" class="top_img">
+                        <span class="top_lab">账户充值</span>
+                        <span class="top_sum">+100000000000元</span>
+                    </div>
+                    <div class="item_line">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </div>
+                    <div class="item_main_foot">
+                        <ul>
+                            <li>
+                                <span class="left-title">订单号</span>
+                                <span class="right-con">2018062106220623</span>
+                            </li>
+                            <li>
+                                <span class="left-title">用途</span>
+                                <span class="right-con">账户充值</span><span style="color: #19b341;margin-left: 5px">已完成</span>
+                            </li>
+                            <li>
+                                <span class="left-title">支付方式</span>
+                                <span class="right-con">中国银行(8344)</span>
+                            </li>
+                            <li>
+                                <span class="left-title">手续费</span>
+                                <span class="right-con">￥10.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <span class="items_time">2018-06-01 下午 23:25</span>
+                <div class="item_main">
+                    <div class="item_main_top">
+                        <img src="images/center/detailrili2.png" class="top_img">
+                        <span class="top_lab">账户充值</span>
+                        <span class="top_sum">+100000000000元</span>
+                    </div>
+                    <div class="item_line">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </div>
+                    <div class="item_main_foot">
+                        <ul>
+                            <li>
+                                <span class="left-title">订单号</span>
+                                <span class="right-con">2018062106220623</span>
+                            </li>
+                            <li>
+                                <span class="left-title">用途</span>
+                                <span class="right-con">账户充值</span><span style="color: #19b341;margin-left: 5px">已完成</span>
+                            </li>
+                            <li>
+                                <span class="left-title">支付方式</span>
+                                <span class="right-con">中国银行(8344)</span>
+                            </li>
+                            <li>
+                                <span class="left-title">手续费</span>
+                                <span class="right-con">￥10.00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="items">
-            <span style="font-size: 11px;">2018-06-01 下午 23:25</span>
-            <div class="item_main">
-                <div class="item_main_top">
-                    <span class="top_left chongzhi">账户充值</span>
-                    <span class="top_right">+100000000000元</span>
-                </div>
-                <div class="item_line">
-                    <span class="left"></span>
-                    <span class="right"></span>
-                </div>
-                <div class="item_main_foot">
-                    <ul>
-                        <li>
-                            <span class="left-title">时间</span>
-                            <span class="right-con">2018-06-01 下午 23：25</span>
-                        </li>
-                        <li>
-                            <span class="left-title">用途</span>
-                            <span class="right-con">账户充值</span>
-                        </li>
-                        <li>
-                            <span class="left-title">支付方式</span>
-                            <span class="right-con">中国银行(8344)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="items">
-            <span style="font-size: 11px;">2018-06-02 下午 19:20</span>
-            <div class="item_main">
-                <div class="item_main_top">
-                    <span class="top_left chongzhi">账户充值</span>
-                    <span class="top_right">+100000000000元</span>
-                </div>
-                <div class="item_line">
-                    <span class="left"></span>
-                    <span class="right"></span>
-                </div>
-                <div class="item_main_foot">
-                    <ul>
-                        <li>
-                            <span class="left-title">时间</span>
-                            <span class="right-con">2018-06-02 下午 19：20</span>
-                        </li>
-                        <li>
-                            <span class="left-title">用途</span>
-                            <span class="right-con">账户充值</span>
-                        </li>
-                        <li>
-                            <span class="left-title">支付方式</span>
-                            <span class="right-con">中国银行(8344)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="tishi"></div>
     </div>
 </body>

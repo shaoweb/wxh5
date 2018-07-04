@@ -13,9 +13,9 @@ app.controller('paymentsCity', function($scope, $http, $filter) {
         $(this).find("span").addClass("select").parent("li").siblings().find("span").removeClass("select");
         $scope.BankCode = $(this).attr("name");
         $scope.Bankname = $(this).attr("date-name");
-        $scope.packtype = $(this).attr("type");
-        arr.push($scope.BankCode, $scope.Bankname, $scope.packtype)
+        arr.push($scope.BankCode, $scope.Bankname, $scope.packtype);
         window.name = arr;
         window.history.back(-1);
-    })
+    });
+
 })

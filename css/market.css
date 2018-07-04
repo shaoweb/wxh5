@@ -69,7 +69,7 @@
 }
 
 
-/* 鐢ㄦ埛鍗忚 */
+/* 閻€劍鍩涢崡蹇氼唴 */
 
 .notice {
     margin: 0 5%;
@@ -178,7 +178,7 @@
 }
 
 
-/* 寮�鎴� */
+/* 瀵拷閹达拷 */
 
 .tishi {
     display: none;
@@ -217,7 +217,7 @@
 }
 
 
-/* 寮�鎴� */
+/* 瀵拷閹达拷 */
 
 .regis {
     height: 54px !important;
@@ -467,7 +467,7 @@
 }
 
 
-/* 韬唤楠岃瘉 */
+/* 闊偂鍞ゆ宀冪槈 */
 
 .header {
     background: #fff;
@@ -519,6 +519,7 @@
     display: block;
     margin: 0 auto;
     height: 125px;
+    pointer-events: none;
 }
 
 .iden_cont>.card>span {
@@ -550,7 +551,7 @@
 }
 
 
-/* 涓汉淇℃伅 */
+/* 娑擃亙姹夋穱鈩冧紖 */
 
 .information {
     background: #fff;
@@ -607,7 +608,7 @@
 }
 
 
-/* 閭�璇风爜 */
+/* 闁拷鐠囬鐖� */
 
 .invite {
     width: 100%;
@@ -677,7 +678,6 @@
     position: fixed;
     bottom: 0;
 }
-
 @media screen and (max-width:320px) {
     .invite>.head_code>img {
         height: 23px;
@@ -688,6 +688,10 @@
     .invite>.invite_con>span {
         margin: 40px auto 9px;
     }
+    .mine_cont>.option_ul>li>a>span{
+    	width:59%;
+    	font-size:14px;
+    }
 }
 
 @media screen and (min-width:414px) {
@@ -697,7 +701,7 @@
 }
 
 
-/* 閾惰璐︽埛 */
+/* 闁炬儼顢戠拹锔藉煕 */
 
 .bankc {
     width: 100%;
@@ -766,7 +770,7 @@
 }
 
 
-/* 鏀粯瀵嗙爜 */
+/* 閺�顖欑帛鐎靛棛鐖� */
 
 .pay {
     margin-top: 37px;
@@ -922,7 +926,7 @@
 }
 
 
-/* 寮�鎴锋垚鍔� */
+/* 瀵拷閹撮攱鍨氶崝锟� */
 
 .fin_head {
     overflow: hidden;
@@ -1066,7 +1070,7 @@
 }
 
 
-/* 鍑洪噾鐢宠 */
+/* 閸戞椽鍣鹃悽瀹狀嚞 */
 
 .spend_head {
     height: 125px;
@@ -1611,7 +1615,7 @@
 }
 
 
-/* 总资产 */
+/* 鎬昏祫浜� */
 
 .mine {
     width: 100%;
@@ -1730,11 +1734,18 @@
 
 .mine_cont>.option_ul>li>a>span {
     float: right;
-    width: 100px;
+    width: 67%;
     text-align: center;
     line-height: 50px;
     font-size: 16px;
     color: #418fde;
+}
+
+@media screen and (max-width:320px) {
+    .mine_cont>.option_ul>li>a>span{
+    	width:59%;
+    	font-size:14px;
+    }
 }
 
 .mine_cont>.figure {

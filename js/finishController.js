@@ -23,7 +23,8 @@ app.controller('finishCity', function($scope, $http, closeWindow) {
 
     closeWindow.getData($scope.str, $scope.times, test).then(function(data) {})
 
-    $scope.finexd = (value) => {
+
+    $scope.finexd = function(value) {
         $scope.fine = value;
     }
 

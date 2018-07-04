@@ -3,6 +3,17 @@ app.controller('mineCity', function($scope, $http, $filter) {
     $scope.title = "总资产";
     $scope.$emit('title', $scope.title);
 
+
+    $http({
+        method: 'GET',
+        url: 'user/searchByAllAcount'
+    }).then(function successCallback(response) {
+        // 成功
+        $scope.mine = response.data.data;
+    }, function errorCallback(response) {
+        // 失败
+    });
+
     $scope.arr = [];
     $scope.dateAsString = $filter('date')(new Date(), "dd");
     for (var i = 1; i <= $scope.dateAsString; i++) {
